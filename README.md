@@ -100,4 +100,4 @@ The host app needs only two changes to add a module:
 
 ## License
 
-MIT — [p2pay.to](https://p2pay.to)
+MIT — p2pay
