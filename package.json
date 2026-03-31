@@ -8,6 +8,8 @@
     "dev": "pnpm -C apps/mono dev",
     "build": "pnpm -C apps/mono build",
     "preview": "pnpm -C apps/mono preview",
+    "dev:market": "pnpm -C apps/market dev",
+    "build:market": "pnpm -C apps/market build",
     "lint:noop": "node -e \"console.log('Add lint later')\""
   }
 }

@@ -1,0 +1,98 @@
+/* MaterialDesignIcons.com */
+@font-face {
+  font-family: "Material Design Icons";
+  src: url("~/node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot");
+  src: url("~/node_modules/@mdi/font/fonts/materialdesignicons-webfont.eot?#iefix") format("embedded-opentype"),
+       url("~/node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff2") format("woff2"),
+       url("~/node_modules/@mdi/font/fonts/materialdesignicons-webfont.woff") format("woff"),
+       url("~/node_modules/@mdi/font/fonts/materialdesignicons-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.mdi:before,
+.mdi-set {
+  display: inline-block;
+  font: normal normal normal 24px/1 "Material Design Icons";
+  font-size: inherit;
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mdi-github::before {
+  content: "\F02A4";
+}
+
+.mdi-bitcoin::before {
+  content: "\F0813";
+}
+
+.mdi-lightning-bolt::before {
+  content: "\F140B";
+}
+
+.mdi-account-multiple::before {
+  content: "\F000E";
+}
+
+.mdi-loading::before {
+  content: "\F0772";
+}
+
+.mdi-developer-board::before {
+  content: "\F0697";
+}
+
+.mdi-open-source-initiative::before {
+  content: "\F0BAE";
+}
+
+.mdi-18px.mdi-set, .mdi-18px.mdi:before {
+  font-size: 18px;
+}
+
+.mdi-24px.mdi-set, .mdi-24px.mdi:before {
+  font-size: 24px;
+}
+
+.mdi-36px.mdi-set, .mdi-36px.mdi:before {
+  font-size: 36px;
+}
+
+.mdi-48px.mdi-set, .mdi-48px.mdi:before {
+  font-size: 48px;
+}
+
+// Animated
+// From Font Awesome
+$mdi-css-prefix: mdi !default;
+
+.#{$mdi-css-prefix}-spin:before {
+  -webkit-animation: #{$mdi-css-prefix}-spin 2s infinite linear;
+          animation: #{$mdi-css-prefix}-spin 2s infinite linear;
+}
+
+@-webkit-keyframes #{$mdi-css-prefix}-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes #{$mdi-css-prefix}-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}

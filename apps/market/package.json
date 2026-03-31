@@ -1,0 +1,29 @@
+{
+  "name": "@p2payto/market",
+  "version": "0.1.0",
+  "author": "Learntheropes <giovanni@learntheropes.xyz>",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "preview": "nuxi preview"
+  },
+  "devDependencies": {
+    "@mdi/font": "^7.2.96",
+    "bulma": "^0.9.4",
+    "nuxt": "^4.0.0",
+    "nuxt-delay-hydration": "^1.2.2",
+    "sass": "^1.68.0"
+  },
+  "dependencies": {
+    "got": "^14.6.6",
+    "lodash.groupby": "^4.6.0",
+    "lodash.maxby": "^4.6.0",
+    "lodash.minby": "^4.6.0",
+    "lodash.sortby": "^4.7.0",
+    "nuxt-umami": "^3.2.0",
+    "socks-proxy-agent": "^8.0.5"
+  }
+}
