@@ -1,5 +1,5 @@
 export default defineEventHandler(() => {
   return {
-    message: 'hello from @p2payments/mono'
+    message: 'hello from @p2pagos/mono'
   }
 })

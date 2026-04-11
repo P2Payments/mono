@@ -8,24 +8,24 @@ Each rail is a dual-mode module: it can run as a **standalone Nitro server** or 
 
 | Package | Page | API | Description |
 |---------|------|-----|-------------|
-| `@p2payments/template` | `/rails/template` | `/api/rails/template` | Reference rail — copy this to scaffold a new integration |
-| `@p2payments/peach` | `/rails/peach` | `/api/rails/peach/*` | [Peach](https://peachbitcoin.com) P2P Bitcoin rail |
-| `@p2payments/robosats` | `/rails/robosats` | `/api/rails/robosats/*` | [RoboSats](https://robosats.com) P2P Bitcoin rail — includes `@p2payments/tor` automatically |
+| `@p2pagos/template` | `/rails/template` | `/api/rails/template` | Reference rail — copy this to scaffold a new integration |
+| `@p2pagos/peach` | `/rails/peach` | `/api/rails/peach/*` | [Peach](https://peachbitcoin.com) P2P Bitcoin rail |
+| `@p2pagos/robosats` | `/rails/robosats` | `/api/rails/robosats/*` | [RoboSats](https://robosats.com) P2P Bitcoin rail — includes `@p2pagos/tor` automatically |
 
 ## Adding a new rail
 
 1. Copy `rails/template` to `rails/<name>`
-2. Rename the package in `package.json` to `@p2payments/<name>`
+2. Rename the package in `package.json` to `@p2pagos/<name>`
 3. Update `module/module.js` defaults (`routeBase`, `configKey`)
-4. Add `"@p2payments/<name>": "workspace:*"` to the app's `package.json`
-5. Add `'@p2payments/<name>'` to the app's `nuxt.config.js` modules array
+4. Add `"@p2pagos/<name>": "workspace:*"` to the app's `package.json`
+5. Add `'@p2pagos/<name>'` to the app's `nuxt.config.js` modules array
 6. Run `pnpm install`
 
 ## Rail anatomy
 
 ```text
 rails/<name>/
-├── package.json                  name: @p2payments/<name>
+├── package.json                  name: @p2pagos/<name>
 ├── nitro.config.js               standalone Nitro server config
 ├── routes/
 │   └── index.get.js              standalone health check

@@ -2,7 +2,7 @@ import { defineNuxtModule, addServerHandler, createResolver } from '@nuxt/kit'
 
 export default defineNuxtModule({
   meta: {
-    name: '@p2payments/template',
+    name: '@p2pagos/template',
     configKey: 'p2payTemplateRail'
   },
   defaults: {

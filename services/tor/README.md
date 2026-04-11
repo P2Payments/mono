@@ -1,4 +1,4 @@
-# @p2payments/tor
+# @p2pagos/tor
 
 Generic Tor reverse proxy. Forwards HTTP requests to any `.onion` address via a local Tor daemon (SOCKS5h). Ships in dual mode: standalone Nitro app or Nuxt module.
 
@@ -36,7 +36,7 @@ pnpm start
 ```js
 // nuxt.config.js
 export default defineNuxtConfig({
-  modules: ['@p2payments/tor'],
+  modules: ['@p2pagos/tor'],
   tor: {
     enabled: true,
     torProxySecret: process.env.NUXT_TOR_PROXY_SECRET
@@ -44,7 +44,7 @@ export default defineNuxtConfig({
 })
 ```
 
-Add `"@p2payments/tor": "workspace:*"` to the app's `package.json` dependencies.
+Add `"@p2pagos/tor": "workspace:*"` to the app's `package.json` dependencies.
 
 ## Request format
 

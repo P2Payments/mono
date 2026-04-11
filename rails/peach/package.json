@@ -1,7 +1,7 @@
 {
-  "name": "@p2payments/peach",
+  "name": "@p2pagos/peach",
   "version": "0.1.0",
-  "author": "p2payments & learntheropes",
+  "author": "p2pagos & learntheropes",
   "license": "MIT",
   "type": "module",
   "private": true,

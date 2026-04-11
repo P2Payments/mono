@@ -1,4 +1,4 @@
-# @p2payments/booking
+# @p2pagos/booking
 
 Nuxt 4 module for the booking/scheduling flow. Ships a full-page booking UI and an embeddable iframe variant with custom theming support.
 
@@ -27,13 +27,13 @@ Nuxt 4 module for the booking/scheduling flow. Ships a full-page booking UI and 
 ```json
 // package.json
 "dependencies": {
-  "@p2payments/booking": "workspace:*"
+  "@p2pagos/booking": "workspace:*"
 }
 ```
 
 ```js
 // nuxt.config.js
 export default defineNuxtConfig({
-  modules: ['@p2payments/booking']
+  modules: ['@p2pagos/booking']
 })
 ```

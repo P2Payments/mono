@@ -1,7 +1,7 @@
 {
-  "name": "@p2payments/market",
+  "name": "@p2pagos/market",
   "version": "0.1.0",
-  "author": "p2payments & learntheropes",
+  "author": "p2pagos & learntheropes",
   "license": "MIT",
   "type": "module",
   "private": true,
