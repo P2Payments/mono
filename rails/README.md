@@ -11,6 +11,7 @@ Each rail is a dual-mode module: it can run as a **standalone Nitro server** or 
 | `@p2pagos/template` | `/rails/template` | `/api/rails/template` | Reference rail — copy this to scaffold a new integration |
 | `@p2pagos/peach` | `/rails/peach` | `/api/rails/peach/*` | [Peach](https://peachbitcoin.com) P2P Bitcoin rail |
 | `@p2pagos/robosats` | `/rails/robosats` | `/api/rails/robosats/*` | [RoboSats](https://robosats.com) P2P Bitcoin rail — includes `@p2pagos/tor` automatically |
+| `@p2pagos/masspay` | `/rails/masspay` | `/api/rails/masspay/*` | [MassPay](https://www.masspay.io) wallet rail — sweeps incoming USDT/ACH funds to PYG via SIPAP |
 
 ## Adding a new rail
 

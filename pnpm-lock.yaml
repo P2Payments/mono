@@ -17,6 +17,9 @@ importers:
       '@p2pagos/ip':
         specifier: workspace:*
         version: link:services/ip
+      '@p2pagos/masspay':
+        specifier: workspace:*
+        version: link:rails/masspay
       '@p2pagos/peach':
         specifier: workspace:*
         version: link:rails/peach
@@ -48,6 +51,18 @@ importers:
       nuxt:
         specifier: ^4.0.0
         version: 4.4.4(@babel/core@7.29.0)(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0))(@parcel/watcher@2.5.6)(@vue/compiler-sfc@3.5.34)(cac@6.7.14)(db0@0.3.4)(ioredis@5.10.1)(lightningcss@1.32.0)(magicast@0.5.2)(rollup-plugin-visualizer@7.0.1(rollup@4.60.3))(rollup@4.60.3)(terser@5.46.2)(typescript@5.9.3)(vite@7.3.2(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.2)(yaml@2.8.4))(yaml@2.8.4)
+
+  rails/masspay:
+    dependencies:
+      '@nuxt/kit':
+        specifier: ^3.13.0
+        version: 3.21.4(magicast@0.5.2)
+      masspay-js-sdk:
+        specifier: ^2.0.0
+        version: 2.0.0
+      nitropack:
+        specifier: latest
+        version: 2.13.4(oxc-parser@0.128.0)
 
   rails/peach:
     dependencies:
@@ -3681,6 +3696,9 @@ packages:
 
   magicast@0.5.2:
     resolution: {integrity: sha512-E3ZJh4J3S9KfwdjZhe2afj6R9lGIN5Pher1pF39UGrXRqq/VDaGVIGN13BjHd2u8B61hArAGOnso7nBOouW3TQ==}
+
+  masspay-js-sdk@2.0.0:
+    resolution: {integrity: sha512-HtncEqLkfpY+H9zyiSnQ1xpd2jLzAxM//0CZi+6z1bEvrluvWJvVvXzuCg2LVlZVU/s4N7ZcYiYyeYIi1+S8kg==}
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -8487,6 +8505,8 @@ snapshots:
       '@babel/parser': 7.29.3
       '@babel/types': 7.29.0
       source-map-js: 1.2.1
+
+  masspay-js-sdk@2.0.0: {}
 
   math-intrinsics@1.1.0: {}
 

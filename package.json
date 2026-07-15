@@ -21,6 +21,7 @@
     "@p2pagos/peach": "workspace:*",
     "@p2pagos/booking": "workspace:*",
     "@p2pagos/robosats": "workspace:*",
-    "@p2pagos/tor": "workspace:*"
+    "@p2pagos/tor": "workspace:*",
+    "@p2pagos/masspay": "workspace:*"
   }
 }
