@@ -1,6 +1,6 @@
-# p2pagos/mono
+# paguaitu/mono
 
-`mono` é o repositório orquestrador do [P2Pagos](https://github.com/P2Pagos). Ele reúne rails de pagamento, fluxos de negócio e serviços de suporte em um único workspace baseado em Nuxt.
+`mono` é o repositório orquestrador do [paguaitu](https://github.com/paguaitu). Ele reúne rails de pagamento, fluxos de negócio e serviços de suporte em um único workspace baseado em Nuxt.
 
 Este repositório ainda está sendo limpo e deve ser lido como uma base inicial do orquestrador, não como um produto finalizado.
 
@@ -26,9 +26,9 @@ Módulos de rails de pagamento. Cada um injeta páginas, composables e handlers 
 
 | Package | Page | API |
 |---------|------|-----|
-| `@p2pagos/template` (`rails/template`) | `/rails/template` | `/api/rails/template` |
-| `@p2pagos/peach` (`rails/peach`) | `/rails/peach` | `/api/rails/peach/*` |
-| `@p2pagos/robosats` (`rails/robosats`) | `/rails/robosats` | `/api/rails/robosats/*` |
+| `@paguaitu/template` (`rails/template`) | `/rails/template` | `/api/rails/template` |
+| `@paguaitu/peach` (`rails/peach`) | `/rails/peach` | `/api/rails/peach/*` |
+| `@paguaitu/robosats` (`rails/robosats`) | `/rails/robosats` | `/api/rails/robosats/*` |
 
 ### Flows
 
@@ -36,7 +36,7 @@ Módulos de funcionalidades de nível superior com páginas e componentes de UI.
 
 | Package | Pages |
 |---------|-------|
-| `@p2pagos/booking` (`flows/booking`) | `/flows/booking`, `/flows/booking/embed` |
+| `@paguaitu/booking` (`flows/booking`) | `/flows/booking`, `/flows/booking/embed` |
 
 ### Services
 
@@ -44,8 +44,8 @@ Módulos de infraestrutura que funcionam tanto como app Nitro standalone quanto 
 
 | Package | Routes | Notes |
 |---------|--------|-------|
-| `@p2pagos/tor` (`services/tor`) | `/api/tor`, `/api/tor/**` | Proxy reverso Tor, desativado por padrão |
-| `@p2pagos/market` (`services/market`) | `/api/market/**` | Agregador de ofertas sem KYC (Bisq, RoboSats, Peach), desativado por padrão |
+| `@paguaitu/tor` (`services/tor`) | `/api/tor`, `/api/tor/**` | Proxy reverso Tor, desativado por padrão |
+| `@paguaitu/market` (`services/market`) | `/api/market/**` | Agregador de ofertas sem KYC (Bisq, RoboSats, Peach), desativado por padrão |
 
 ## O que isto não é
 
@@ -66,8 +66,8 @@ pnpm preview
 
 O app Nuxt raiz (`nuxt.config.js`) lista os módulos do workspace no array `modules`. Cada módulo registra automaticamente suas páginas, composables e handlers de servidor quando o app inicia. Adicionar um módulo exige duas mudanças:
 
-1. Adicionar `"@p2pagos/<name>": "workspace:*"` às dependências do `package.json` raiz
-2. Adicionar `'@p2pagos/<name>'` ao array `modules` em `nuxt.config.js`
+1. Adicionar `"@paguaitu/<name>": "workspace:*"` às dependências do `package.json` raiz
+2. Adicionar `'@paguaitu/<name>'` ao array `modules` em `nuxt.config.js`
 
 `flows/booking` requer `@nuxt/ui`. Ele deve estar presente em `nuxt.config.js` antes ou junto com o módulo booking.
 
@@ -85,7 +85,7 @@ O app Nuxt raiz (`nuxt.config.js`) lista os módulos do workspace no array `modu
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
 | `NUXT_ROBOSATS_COORDINATOR_URL` | no | onion padrão do RoboSats | URL base onion do coordenador |
-| `NUXT_TOR_PROXY_SECRET` | yes | — | Segredo compartilhado para o proxy embutido `@p2pagos/tor` |
+| `NUXT_TOR_PROXY_SECRET` | yes | — | Segredo compartilhado para o proxy embutido `@paguaitu/tor` |
 | `NUXT_TOR_SOCKS_URL` | no | `socks5h://127.0.0.1:9050` | URL SOCKS5h do daemon Tor local |
 
 ### `rails/peach`
