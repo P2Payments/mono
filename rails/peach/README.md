@@ -1,5 +1,7 @@
 # @p2pagos/peach
 
+## This rail is not currently maintained. 
+
 Dual-mode module for the [Peach](https://peachbitcoin.com) P2P Bitcoin rail. Handles offer creation, trade requests, contract management, and payment confirmation using BIP32 key derivation and PGP signing.
 
 ## API routes
