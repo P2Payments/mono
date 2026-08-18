@@ -1,6 +1,6 @@
 <template>
   <main style="padding: 24px; font-family: ui-sans-serif, system-ui;">
-    <h1>@p2pagos/masspay rail</h1>
+    <h1>@paguaitu/masspay rail</h1>
     <p v-if="pending">Loading balance…</p>
     <p v-else-if="error">Error: {{ error.message }}</p>
     <ul v-else>

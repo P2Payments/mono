@@ -1,4 +1,4 @@
-# @p2pagos/market
+# @paguaitu/market
 
 KYC-free Bitcoin offer aggregator. Fetches live buy and sell offers from Bisq, RoboSats, and Peach Bitcoin, normalises them into a single price list, and exposes them over a unified REST API.
 
@@ -81,7 +81,7 @@ pnpm start
 ```js
 // nuxt.config.js
 export default defineNuxtConfig({
-  modules: ['@p2pagos/market'],
+  modules: ['@paguaitu/market'],
   market: {
     enabled: true,
     torProxySecret: process.env.NUXT_TOR_PROXY_SECRET,
@@ -90,7 +90,7 @@ export default defineNuxtConfig({
 })
 ```
 
-Add `"@p2pagos/market": "workspace:*"` to the app's `package.json` dependencies.
+Add `"@paguaitu/market": "workspace:*"` to the app's `package.json` dependencies.
 
 The module is disabled by default (`enabled: false`). Set `enabled: true` or `NUXT_MARKET_ENABLED=true` to activate it.
 

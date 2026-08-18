@@ -5,8 +5,8 @@ const toBoolean = (v) => String(v || '').toLowerCase() === 'true'
 
 export default defineNuxtModule({
   meta: {
-    name: '@p2pagos/masspay',
-    configKey: 'p2payMasspayRail'
+    name: '@paguaitu/masspay',
+    configKey: 'paguaituMasspayRail'
   },
 
   defaults: {
@@ -59,7 +59,7 @@ export default defineNuxtModule({
     // Page
     nuxt.hook('pages:extend', (pages) => {
       pages.push({
-        name: 'p2pay-rail-masspay',
+        name: 'paguaitu-rail-masspay',
         path: options.routeBase,
         file: resolver.resolve('../runtime/pages/masspay.vue')
       })

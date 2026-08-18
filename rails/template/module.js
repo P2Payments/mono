@@ -2,8 +2,8 @@ import { defineNuxtModule, addServerHandler, createResolver } from '@nuxt/kit'
 
 export default defineNuxtModule({
   meta: {
-    name: '@p2pagos/template',
-    configKey: 'p2payTemplateRail'
+    name: '@paguaitu/template',
+    configKey: 'paguaituTemplateRail'
   },
   defaults: {
     enabled: true,
@@ -17,7 +17,7 @@ export default defineNuxtModule({
     // Page at /rails/template
     nuxt.hook('pages:extend', (pages) => {
       pages.push({
-        name: 'p2pay-rail-template',
+        name: 'paguaitu-rail-template',
         path: options.routeBase,
         file: resolver.resolve('./runtime/pages/template.vue')
       })

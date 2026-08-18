@@ -5,7 +5,7 @@
 
 # paguaitu/orchestrator
 
-This is the orchestrator repo for [P2Pay.to](https://P2Pay.to). It assembles payment rails, business flows, and support services into a single Nuxt-based workspace.
+`orchestrator` is the orchestrator repo for a solo user. It assembles payment rails, business flows, and support services into a single Nuxt-based workspace.
 
 This repository is still being cleaned up and should be read as an early orchestrator base, not as a finished product.
 
@@ -55,7 +55,7 @@ Infrastructure modules that run as both a standalone Nitro app and an embeddable
 
 ## What this is not
 
-- Not a finished marketplace
+- Not a finished cloud
 - Not a polished public SDK
 - Not stable enough yet to promise broad production use
 

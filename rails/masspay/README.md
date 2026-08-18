@@ -1,4 +1,4 @@
-# @p2pagos/masspay
+# @paguaitu/masspay
 
 Dual-mode module for the [MassPay](https://www.masspay.io) wallet rail. Listens for MassPay's incoming-funds webhooks (USDT load, ACH deposit) and automatically sweeps the full available balance to a single preconfigured beneficiary in PYG via SIPAP (Paraguay). Uses the official [`masspay-js-sdk`](https://github.com/masspayio/masspay-js-sdk).
 
@@ -46,15 +46,15 @@ Before this rail can pay out, you need, once:
 ```json
 // package.json
 "dependencies": {
-  "@p2pagos/masspay": "workspace:*"
+  "@paguaitu/masspay": "workspace:*"
 }
 ```
 
 ```js
 // nuxt.config.js
 export default defineNuxtConfig({
-  modules: ['@p2pagos/masspay'],
-  p2payMasspayRail: {
+  modules: ['@paguaitu/masspay'],
+  paguaituMasspayRail: {
     enabled: true
   }
 })

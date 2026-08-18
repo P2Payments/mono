@@ -11,25 +11,25 @@ importers:
       '@nuxt/ui':
         specifier: ^3.0.0
         version: 3.3.7(@babel/parser@7.29.3)(db0@0.3.4)(embla-carousel@8.6.0)(ioredis@5.10.1)(magicast@0.5.2)(typescript@5.9.3)(vite@7.3.2(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.2)(yaml@2.8.4))(vue@3.5.34(typescript@5.9.3))
-      '@p2pagos/booking':
+      '@paguaitu/booking':
         specifier: workspace:*
         version: link:flows/booking
-      '@p2pagos/ip':
+      '@paguaitu/ip':
         specifier: workspace:*
         version: link:services/ip
-      '@p2pagos/masspay':
+      '@paguaitu/masspay':
         specifier: workspace:*
         version: link:rails/masspay
-      '@p2pagos/peach':
+      '@paguaitu/peach':
         specifier: workspace:*
         version: link:rails/peach
-      '@p2pagos/robosats':
+      '@paguaitu/robosats':
         specifier: workspace:*
         version: link:rails/robosats
-      '@p2pagos/template':
+      '@paguaitu/template':
         specifier: workspace:*
         version: link:rails/template
-      '@p2pagos/tor':
+      '@paguaitu/tor':
         specifier: workspace:*
         version: link:services/tor
       nuxt:
@@ -102,7 +102,7 @@ importers:
       '@nuxt/kit':
         specifier: ^3.13.0
         version: 3.21.4(magicast@0.5.2)
-      '@p2pagos/tor':
+      '@paguaitu/tor':
         specifier: workspace:*
         version: link:../../services/tor
       base-ex:
