@@ -1,6 +1,6 @@
-# paguaitu/mono
+# paguaitu/orchestrator
 
-`mono` é o repositório orquestrador do [paguaitu](https://github.com/paguaitu). Ele reúne rails de pagamento, fluxos de negócio e serviços de suporte em um único workspace baseado em Nuxt.
+`orchestrator` é o repositório orquestrador do [paguaitu](https://github.com/paguaitu). Ele reúne rails de pagamento, fluxos de negócio e serviços de suporte em um único workspace baseado em Nuxt.
 
 Este repositório ainda está sendo limpo e deve ser lido como uma base inicial do orquestrador, não como um produto finalizado.
 
@@ -49,7 +49,7 @@ Módulos de infraestrutura que funcionam tanto como app Nitro standalone quanto 
 
 ## O que isto não é
 
-- Não é um marketplace finalizado
+- Não é um cloud finalizado
 - Não é um SDK público polido
 - Ainda não é estável o bastante para prometer uso amplo em produção
 

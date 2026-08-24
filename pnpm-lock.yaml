@@ -11,22 +11,25 @@ importers:
       '@nuxt/ui':
         specifier: ^3.0.0
         version: 3.3.7(@babel/parser@7.29.3)(db0@0.3.4)(embla-carousel@8.6.0)(ioredis@5.10.1)(magicast@0.5.2)(typescript@5.9.3)(vite@7.3.2(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.2)(yaml@2.8.4))(vue@3.5.34(typescript@5.9.3))
-      '@p2pagos/booking':
+      '@paguaitu/booking':
         specifier: workspace:*
         version: link:flows/booking
-      '@p2pagos/ip':
+      '@paguaitu/ip':
         specifier: workspace:*
         version: link:services/ip
-      '@p2pagos/peach':
+      '@paguaitu/masspay':
+        specifier: workspace:*
+        version: link:rails/masspay
+      '@paguaitu/peach':
         specifier: workspace:*
         version: link:rails/peach
-      '@p2pagos/robosats':
+      '@paguaitu/robosats':
         specifier: workspace:*
         version: link:rails/robosats
-      '@p2pagos/template':
+      '@paguaitu/template':
         specifier: workspace:*
         version: link:rails/template
-      '@p2pagos/tor':
+      '@paguaitu/tor':
         specifier: workspace:*
         version: link:services/tor
       nuxt:
@@ -48,6 +51,18 @@ importers:
       nuxt:
         specifier: ^4.0.0
         version: 4.4.4(@babel/core@7.29.0)(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0))(@parcel/watcher@2.5.6)(@vue/compiler-sfc@3.5.34)(cac@6.7.14)(db0@0.3.4)(ioredis@5.10.1)(lightningcss@1.32.0)(magicast@0.5.2)(rollup-plugin-visualizer@7.0.1(rollup@4.60.3))(rollup@4.60.3)(terser@5.46.2)(typescript@5.9.3)(vite@7.3.2(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.2)(yaml@2.8.4))(yaml@2.8.4)
+
+  rails/masspay:
+    dependencies:
+      '@nuxt/kit':
+        specifier: ^3.13.0
+        version: 3.21.4(magicast@0.5.2)
+      masspay-js-sdk:
+        specifier: ^2.0.0
+        version: 2.0.0
+      nitropack:
+        specifier: latest
+        version: 2.13.4(oxc-parser@0.128.0)
 
   rails/peach:
     dependencies:
@@ -87,7 +102,7 @@ importers:
       '@nuxt/kit':
         specifier: ^3.13.0
         version: 3.21.4(magicast@0.5.2)
-      '@p2pagos/tor':
+      '@paguaitu/tor':
         specifier: workspace:*
         version: link:../../services/tor
       base-ex:
@@ -3681,6 +3696,9 @@ packages:
 
   magicast@0.5.2:
     resolution: {integrity: sha512-E3ZJh4J3S9KfwdjZhe2afj6R9lGIN5Pher1pF39UGrXRqq/VDaGVIGN13BjHd2u8B61hArAGOnso7nBOouW3TQ==}
+
+  masspay-js-sdk@2.0.0:
+    resolution: {integrity: sha512-HtncEqLkfpY+H9zyiSnQ1xpd2jLzAxM//0CZi+6z1bEvrluvWJvVvXzuCg2LVlZVU/s4N7ZcYiYyeYIi1+S8kg==}
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -8487,6 +8505,8 @@ snapshots:
       '@babel/parser': 7.29.3
       '@babel/types': 7.29.0
       source-map-js: 1.2.1
+
+  masspay-js-sdk@2.0.0: {}
 
   math-intrinsics@1.1.0: {}
 

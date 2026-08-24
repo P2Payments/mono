@@ -5,8 +5,8 @@ const toBoolean = (v) => String(v || '').toLowerCase() === 'true'
 
 export default defineNuxtModule({
   meta: {
-    name: '@p2pagos/robosats',
-    configKey: 'p2payRobosatsRail'
+    name: '@paguaitu/robosats',
+    configKey: 'paguaituRobosatsRail'
   },
 
   defaults: {
@@ -35,7 +35,7 @@ export default defineNuxtModule({
       '/api/tor'
 
     // Install services/tor as a Nuxt module
-    await installModule('@p2pagos/tor', {
+    await installModule('@paguaitu/tor', {
       enabled: true,
       prefix: options.torPrefix || '/api/tor',
       torProxySecret: options.torProxySecret,
@@ -62,7 +62,7 @@ export default defineNuxtModule({
     // Page
     nuxt.hook('pages:extend', (pages) => {
       pages.push({
-        name: 'p2pay-rail-robosats',
+        name: 'paguaitu-rail-robosats',
         path: options.routeBase,
         file: resolver.resolve('../runtime/pages/robosats.vue')
       })

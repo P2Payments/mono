@@ -1,10 +1,12 @@
-# @p2pagos/market
+# @paguaitu/market
 
 KYC-free Bitcoin offer aggregator. Fetches live buy and sell offers from Bisq, RoboSats, and Peach Bitcoin, normalises them into a single price list, and exposes them over a unified REST API.
 
 The primary use case is price discovery for outbound payment flows: given a fiat currency and a payment method, find the platform and price at which to publish a buy offer so that a buyer pays with fiat and receives BTC — which is then forwarded automatically to the merchant via the underlying P2P rail.
 
 Bisq and RoboSats are reached via a local Tor daemon (SOCKS5h). Peach Bitcoin is fetched over clearnet. Ships in dual mode: standalone Nitro app or Nuxt module.
+
+Also aggregates Paraguayan loan (financing) offers, currently sourced from TuPrestamo (`tuprestamo.com.py`, HTML-scraped — no JSON API exists there).
 
 ## Routes
 
@@ -20,9 +22,15 @@ Bisq and RoboSats are reached via a local Tor daemon (SOCKS5h). Peach Bitcoin is
 | `GET` | `/api/market/offers/:currency/sell/bisq` | Sell offers from Bisq only |
 | `GET` | `/api/market/offers/:currency/sell/robosats` | Sell offers from RoboSats only |
 | `GET` | `/api/market/offers/:currency/sell/peach` | Sell offers from Peach Bitcoin only |
+| `GET` | `/api/market/financing/types` | List of supported loan types |
+| `GET` | `/api/market/financing/platforms` | List of supported lenders |
+| `GET` | `/api/market/financing/:type` | Aggregated loan offers across all lenders, sorted by lowest monthly payment |
+| `GET` | `/api/market/financing/:type/tuprestamo` | Loan offers from TuPrestamo only |
 | `ALL` | `/api/market/tor-proxy/**` | Internal authenticated Tor proxy (used by Bisq and RoboSats fetchers) |
 
 `:currency` must be a code returned by `/api/market/currencies` (e.g. `EUR`, `USD`, `BRL`). Unsupported codes return `404`.
+
+`:type` must be a code returned by `/api/market/financing/types` (currently only `personal`). `financing` endpoints require `monto` and `month` query params (loan amount in PYG and term in months), e.g. `/api/market/financing/personal?monto=70000000&month=36`. Missing params return `400`.
 
 ## Response shape
 
@@ -57,6 +65,29 @@ Partial failures are non-fatal. If one platform is unreachable the others are st
 }
 ```
 
+### Financing offers
+
+Each offer in a `financing/:type` `data` array has the following fields:
+
+```json
+{
+  "service": "TuPrestamo",
+  "site": "https://tuprestamo.com.py/",
+  "features": ["py", "loan"],
+  "entity": "Entidad 5",
+  "rating": 4.4,
+  "reviews": 98,
+  "purpose": "Personal",
+  "termMonths": 36,
+  "amount": 70000000,
+  "otherFees": 160000,
+  "monthlyPayment": 3450000,
+  "requirements": "Sin documentos obligatorios"
+}
+```
+
+`entity` names come back anonymised (`Entidad 5`, `Entidad 6`, ...) directly from the source — the real lender is only disclosed after a lead is submitted there. Sorted ascending by `monthlyPayment` (cheapest first).
+
 ## Environment variables
 
 | Variable | Required | Default | Description |
@@ -81,7 +112,7 @@ pnpm start
 ```js
 // nuxt.config.js
 export default defineNuxtConfig({
-  modules: ['@p2pagos/market'],
+  modules: ['@paguaitu/market'],
   market: {
     enabled: true,
     torProxySecret: process.env.NUXT_TOR_PROXY_SECRET,
@@ -90,7 +121,7 @@ export default defineNuxtConfig({
 })
 ```
 
-Add `"@p2pagos/market": "workspace:*"` to the app's `package.json` dependencies.
+Add `"@paguaitu/market": "workspace:*"` to the app's `package.json` dependencies.
 
 The module is disabled by default (`enabled: false`). Set `enabled: true` or `NUXT_MARKET_ENABLED=true` to activate it.
 

@@ -5,7 +5,7 @@ import { middlewareDefs } from './definitions/middlewares.js'
 
 export default defineNuxtModule({
   meta: {
-    name: '@p2pagos/booking',
+    name: '@paguaitu/booking',
     configKey: 'p2payBookingFlow'
   },
   defaults: {
@@ -60,7 +60,7 @@ export default defineNuxtModule({
       const route = rel ? `${base}/${rel}` : base
       const key = `${method} ${route}`
 
-      if (seen.has(key)) throw new Error(`[@p2pagos/booking] Duplicate endpoint: ${key}`)
+      if (seen.has(key)) throw new Error(`[@paguaitu/booking] Duplicate endpoint: ${key}`)
       seen.add(key)
 
       addServerHandler({

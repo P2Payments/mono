@@ -5,8 +5,8 @@ const toBoolean = (v) => String(v || '').toLowerCase() === 'true'
 
 export default defineNuxtModule({
   meta: {
-    name: '@p2pagos/peach',
-    configKey: 'p2payPeachRail'
+    name: '@paguaitu/peach',
+    configKey: 'paguaituPeachRail'
   },
 
   defaults: {
@@ -65,7 +65,7 @@ export default defineNuxtModule({
     // Page
     nuxt.hook('pages:extend', (pages) => {
       pages.push({
-        name: 'p2pay-rail-peach',
+        name: 'paguaitu-rail-peach',
         path: options.routeBase,
         file: resolver.resolve('../runtime/pages/peach.vue')
       })

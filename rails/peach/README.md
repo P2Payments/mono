@@ -1,4 +1,4 @@
-# @p2pagos/peach
+# @paguaitu/peach
 
 ## This rail is not currently maintained. 
 
@@ -33,15 +33,15 @@ Dual-mode module for the [Peach](https://peachbitcoin.com) P2P Bitcoin rail. Han
 ```json
 // package.json
 "dependencies": {
-  "@p2pagos/peach": "workspace:*"
+  "@paguaitu/peach": "workspace:*"
 }
 ```
 
 ```js
 // nuxt.config.js
 export default defineNuxtConfig({
-  modules: ['@p2pagos/peach'],
-  p2payPeachRail: {
+  modules: ['@paguaitu/peach'],
+  paguaituPeachRail: {
     enabled: true
   }
 })
