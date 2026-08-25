@@ -17,7 +17,7 @@ const fetchBisqOffers = async (currency) => {
     timeout: { request: 20000 },
     headers: {
       accept: 'application/json',
-      'user-agent': 'p2pay'
+      'user-agent': 'paguaitu'
     }
   })
 

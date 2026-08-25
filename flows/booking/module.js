@@ -6,7 +6,7 @@ import { middlewareDefs } from './definitions/middlewares.js'
 export default defineNuxtModule({
   meta: {
     name: '@paguaitu/booking',
-    configKey: 'p2payBookingFlow'
+    configKey: 'paguaituBookingFlow'
   },
   defaults: {
     enabled: true,
