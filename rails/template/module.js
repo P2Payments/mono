@@ -2,7 +2,7 @@ import { defineNuxtModule, addServerHandler, createResolver } from '@nuxt/kit'
 
 export default defineNuxtModule({
   meta: {
-    name: '@paguaitu/template',
+    name: '@paga-peaha-ai/template',
     configKey: 'paguaituTemplateRail'
   },
   defaults: {

@@ -6,7 +6,7 @@ const toBoolean = (v) => String(v || '').toLowerCase() === 'true'
 
 export default defineNuxtModule({
   meta: {
-    name: '@paguaitu/tor',
+    name: '@paga-peaha-ai/tor',
     configKey: 'tor'
   },
 

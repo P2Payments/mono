@@ -11,9 +11,9 @@ Each service ships in **dual mode**:
 
 | Package | Routes | Description |
 |---------|--------|-------------|
-| `@paguaitu/tor` (`services/tor`) | `GET /api/tor`, `ALL /api/tor/**` | Generic Tor reverse proxy — forwards requests to any `.onion` address via SOCKS5h. Target set per-request via `X-Tor-Target` header |
-| `@paguaitu/cors` (`services/cors`) | `GET /api/cors`, `ALL /api/cors/**` | CORS reverse proxy — proxies a configured target API with secret-based auth |
-| `@paguaitu/market` (`services/market`) | `GET /api/market/**` | KYC-free Bitcoin price aggregator — buy/sell offers from Bisq, RoboSats, Peach |
+| `@paga-peaha-ai/tor` (`services/tor`) | `GET /api/tor`, `ALL /api/tor/**` | Generic Tor reverse proxy — forwards requests to any `.onion` address via SOCKS5h. Target set per-request via `X-Tor-Target` header |
+| `@paga-peaha-ai/cors` (`services/cors`) | `GET /api/cors`, `ALL /api/cors/**` | CORS reverse proxy — proxies a configured target API with secret-based auth |
+| `@paga-peaha-ai/market` (`services/market`) | `GET /api/market/**` | KYC-free Bitcoin price aggregator — buy/sell offers from Bisq, RoboSats, Peach |
 
 ## Standalone: running locally
 
@@ -30,7 +30,7 @@ Add the service as a workspace dependency and enable it in `nuxt.config.js`:
 ```js
 // nuxt.config.js
 export default defineNuxtConfig({
-  modules: ['@paguaitu/tor'],
+  modules: ['@paga-peaha-ai/tor'],
   tor: {
     enabled: true,
     torProxySecret: process.env.NUXT_TOR_PROXY_SECRET

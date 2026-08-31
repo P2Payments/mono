@@ -1,12 +1,12 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/ui',
-    '@paguaitu/ip',
-    '@paguaitu/template',
-    '@paguaitu/peach',
-    '@paguaitu/booking',
-    '@paguaitu/robosats',
-    '@paguaitu/masspay'
+    '@paga-peaha-ai/ip',
+    '@paga-peaha-ai/template',
+    '@paga-peaha-ai/peach',
+    '@paga-peaha-ai/booking',
+    '@paga-peaha-ai/robosats',
+    '@paga-peaha-ai/masspay'
   ],
 
   ipDetection: {

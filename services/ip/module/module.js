@@ -5,7 +5,7 @@ const toBoolean = (v) => String(v || '').toLowerCase() === 'true'
 
 export default defineNuxtModule({
   meta: {
-    name: '@paguaitu/ip',
+    name: '@paga-peaha-ai/ip',
     configKey: 'ipDetection'
   },
 

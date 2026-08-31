@@ -1,4 +1,4 @@
-# @paguaitu/cors
+# @paga-peaha-ai/cors
 
 CORS reverse proxy service. Proxies a configured target API, adding CORS headers and validating requests with a shared secret. Ships in dual mode: standalone Nitro app (Cloudflare Workers) or Nuxt module.
 
@@ -33,7 +33,7 @@ pnpm deploy   # Cloudflare Workers via wrangler
 ```js
 // nuxt.config.js
 export default defineNuxtConfig({
-  modules: ['@paguaitu/cors'],
+  modules: ['@paga-peaha-ai/cors'],
   corsProxy: {
     enabled: true,
     corsTargetUrl: 'https://api.peachbitcoin.com',
@@ -42,4 +42,4 @@ export default defineNuxtConfig({
 })
 ```
 
-Add `"@paguaitu/cors": "workspace:*"` to the app's `package.json` dependencies.
+Add `"@paga-peaha-ai/cors": "workspace:*"` to the app's `package.json` dependencies.
