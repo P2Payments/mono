@@ -1,19 +1,22 @@
-<<<<<<< Updated upstream
-[Español](README.es.md) | [Português](README.pt.md)  
-
-=======
 [![AI generated doc](https://deepwiki.com/badge.svg)](https://deepwiki.com/peaha/pay-orchestrator)
 
 # @paga-peaha-ai/pay #todo @ai #master true #pri 1
->>>>>>> Stashed changes
 
-[![AI generated doc](https://deepwiki.com/badge.svg)](https://deepwiki.com/paguaitu/orchestrator)
+## Stage
 
-# paguaitu/orchestrator
+Most of the repos/modules in this monorepo are ready to be tested in projects not in production stage.  
 
-`orchestrator` is the orchestrator repo for a solo user. It assembles payment rails, business flows, and support services into a single Nuxt-based workspace.
+The core orchestrator will be devolped once that the first integrations are enough to define a standard of comunicnations required.  
 
-This repository is still being cleaned up and should be read as an early orchestrator base, not as a finished product.
+None of the modules are meant to be used in production unless clearly mentioned in the related repo's README.md  
+
+The reason it is public today is to find contributors and not as a mean to distribute it to be used in anything serious.
+
+## Discalimer
+
+We don't have affiliation with any of the services listed here and we don't mean to rapresent any of them. 
+
+All the integration are based on public avaialble API or MCP meant to be publiccly used, with or without a registration and authentication.
 
 ## Structure
 
@@ -29,8 +32,6 @@ This repository is still being cleaned up and should be read as an early orchest
 └── utils/              shared utilities
 ```
 
-<<<<<<< Updated upstream
-=======
 ## Description
 
 Orchestrator repo for PE'AHA ecosystem. 
@@ -41,10 +42,27 @@ Most of the repos are in dual mode as a module to import in a Nuxt project or st
   
 The Payment and the AI integrations are ment to be run isolated eachother on two web apps with one of the two channels enabled.  
 
->>>>>>> Stashed changes
 ## What exists today
 
-### Rails
+### PAY
+
+Payment rails, business flows, and support services and models/api/mcp/cmd integrations into a single Nuxt-based workspace.
+
+P2P market aggregated order book, on web or tor.
+
+Robosats and Peach autnetication and all the needed endpints to run the flow.
+
+They both come with tradeoff:
+
+Robosats requires a Bond on LN. When completed it is meant to be used for returning clients with the bond approved and paid by the merchant.
+
+While Peach requires to import and existing keypairs of an account with trading history to have all the needed functionalties.
+
+Nostr in the next coming, in high priority, that in thoery solves both previous issues, but previous issues where news during the development.
+
+Bisq has not been yet even evaluated and it is mentioned here as a note.
+
+#### Rails  
 
 Payment rail modules. Each injects pages, composables, and server handlers into the host app, and can also run standalone as a Nitro server.
 
@@ -54,7 +72,7 @@ Payment rail modules. Each injects pages, composables, and server handlers into 
 | `@paga-peaha-ai/peach` (`rails/peach`) | `/rails/peach` | `/api/rails/peach/*` |
 | `@paga-peaha-ai/robosats` (`rails/robosats`) | `/rails/robosats` | `/api/rails/robosats/*` |
 
-### Flows
+#### Flows
 
 Higher-level feature modules with pages and UI components.
 
@@ -62,7 +80,7 @@ Higher-level feature modules with pages and UI components.
 |---------|-------|
 | `@paga-peaha-ai/booking` (`flows/booking`) | `/flows/booking`, `/flows/booking/embed` |
 
-### Services
+#### Services
 
 Infrastructure modules that run as both a standalone Nitro app and an embeddable Nuxt module.
 
@@ -72,11 +90,9 @@ Infrastructure modules that run as both a standalone Nitro app and an embeddable
 | `@paga-peaha-ai/tor` (`services/tor`) | `/api/tor`, `/api/tor/**` | Tor reverse proxy, disabled by default |
 | `@paga-peaha-ai/market` (`services/market`) | `/api/market/**` | KYC-free offer aggregator (Bisq, RoboSats, Peach), disabled by default |
 
-## What this is not
+### AI
 
-- Not a finished cloud
-- Not a polished public SDK
-- Not stable enough yet to promise broad production use
+#todo @giovanni
 
 ## Local development
 
@@ -148,4 +164,3 @@ The root Nuxt app (`nuxt.config.js`) lists workspace modules in the `modules` ar
 ## Known issues
 
 - `@nuxt/kit` version mismatch: `rails/peach`, `rails/robosats`, and `services/tor` declare `@nuxt/kit ^3.13.0` while the root app and `rails/template`, `flows/booking` use `^4.0.0`. The modules work in module mode via Nuxt's own kit instance, but full standalone migration to `^4.0.0` is pending.
-

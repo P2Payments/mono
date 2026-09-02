@@ -5,13 +5,8 @@ import { middlewareDefs } from './definitions/middlewares.js'
 
 export default defineNuxtModule({
   meta: {
-<<<<<<< Updated upstream
-    name: '@paguaitu/booking',
-    configKey: 'p2payBookingFlow'
-=======
     name: '@paga-peaha-ai/booking',
     configKey: 'paguaituBookingFlow'
->>>>>>> Stashed changes
   },
   defaults: {
     enabled: true,
